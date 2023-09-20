@@ -16,11 +16,13 @@
 
         <div class="container">
 
-            <ul class="list-group">
+            <ul v-if="randomMails.length >= 10" class="list-group">
                 
-                <li class="list-group-item">{{randomMail}}</li>
+                <li v-for="(mail, index) in randomMails" class="list-group-item">{{ mail }}</li>
                 
-              </ul>
+            </ul> 
+              
+              <!-- [ "lynch.raleigh@gmail.com" ] -->
 
         </div>
 
